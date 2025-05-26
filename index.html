@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA_Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Programação Web - Atividade JS</title>
+        <link rel="stylesheet" href="./css/estilos.css" />
+        <script src="./js/script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Atividades para Avaliação JS</h1>
+        </header>
+        <p id="atv">Atividade 01:</p>
+        <div id="atv_container">
+            <p id="data_hoje"></p>
+            <p id="data_ferias"></p>
+            <p id="data_niver"></p>
+        </div>
+        <hr />
+        <p id="atv">Atividade 02:</p>
+        <div id="atv_container">
+            <p>Calculadora IMC</p>
+            <div id="form">
+                <div class="form_cont">
+                    <label for="peso">Peso: </label>
+                    <input id="peso" type="number" name="peso" inputmode="numeric" placeholder="Peso" required="required" min="1" autofocus>
+                </div>
+                <div class="form_cont">
+                    <label for="altura">Altura: </label>
+                    <input id="altura" type="number" name="altura" inputmode="numeric" placeholder="Altura (em cm)" required="required" min="10">
+                </div>
+                <button href="#" id="button1" type="submit">Calcular IMC</button>
+            </div>
+            <textarea id="imc_box" name="imc" inputmode="numeric" placeholder="Seu IMC é..." readonly></textarea>
+        </div>
+        <hr />
+        <p id="atv">Atividade 03:</p>
+        <div id="atv_container">
+            <p>Média Aritmética</p>
+            <div id="form">
+                <div class="form_out">
+                    <div class="form_cont">
+                        <label for="nota1" class="label">Nota 1: </label>
+                        <input id="nota1" type="number" name="nota1" inputmode="numeric" pattern="[0-9]*" placeholder="Nota 1" required="required" min="0" max="10">
+                    </div>
+                    <p id="error_input3"></p>
+                    <div class="form_cont">
+                        <label for="nota2" class="label">Nota 2: </label>
+                        <input id="nota2" type="number" name="nota2" inputmode="numeric" pattern="[0-9]*" placeholder="Nota 2" required="required" min="0" max="10">
+                    </div>
+                    <p id="error_input4"></p>
+                </div>
+                <div class="form_out">
+                    <button href="#" id="button2" type="submit">Calcular Média</button>
+                    <textarea id="media_box" name="media" inputmode="numeric" placeholder="Sua média é..." readonly></textarea>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <p id="atv">Atividade 04:</p>
+        <div id="atv_container">
+            <p>Lista VIP</p>
+            <div class="form">
+                <div class="form_cont">
+                    <label for="lista" class="label">Nomes: utilize (,) virgula entre os nomes</label>
+                    <input type="text" name="lista" id="listaVIP" placeholder="Alice, Eduardo, Carlos..." required="required">
+                </div>
+                <div class="form_center">
+                    <button href="#" id="button4" type="submit">Limpar tudo</button> 
+                    <button href="#" id="button5" type="submit">Limpar último</button> 
+                    <button href="#" id="button3" type="submit">Inserir</button>        
+                </div>
+                <div class="form_cont">
+                    <ul id="pLista"></ul>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <p id="atv">Atividade 05:</p>
+        <div id="atv_container">
+            <p>Que dia é hoje?</p>
+            <div class="form">
+                <div class="form_center">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

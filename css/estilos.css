@@ -161,6 +161,11 @@ hr {
         margin-bottom: 10px;
     }
 
+    #form_center{
+        flex-direction: column;
+        justify-content: center;
+    }
+
     #listaVIP {
         /* max-width: 100%; */
         min-width: 100%;

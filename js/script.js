@@ -2,8 +2,6 @@
 
 let hoje_hora = Date.now();
 let hoje = Date();
-console.log(hoje);
-console.log(hoje_hora);
 
 function f_countdown (datamenor, datamaior) {
     let mili = datamaior - datamenor;
@@ -171,3 +169,33 @@ clear_last.addEventListener("mouseup", () => {
     lista_array.pop();
     pLista.removeChild(pLista.lastElementChild);
 });
+
+//Atividade 05
+
+let hoje_data = new Date();
+let hora_hoje = hoje_data.getHours();
+let saudacao;
+let dia_da_semana = ["domingo","segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+let meses_do_ano = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+
+switch(true){
+    case(hora_hoje < 12):
+        saudacao = "Bom dia!";break;
+    case(hora_hoje < 18):
+        saudacao = "Boa tarde!";break;
+    case(hora_hoje >= 18):
+        saudacao = "Boa noite!";break;
+}
+
+let print_data = document.getElementById("hoje_print");
+
+function addZero(i) {
+  if (i < 10) {i = "0" + i}
+  return i;
+}
+
+print_data.innerHTML = `${saudacao} Hoje é ${dia_da_semana[hoje_data.getDay()]}, ${addZero(hoje_data.getDate())} de 
+${meses_do_ano[hoje_data.getMonth()]} de ${hoje_data.getFullYear()} - ${addZero(hoje_data.getHours())}:${addZero(hoje_data.getMinutes())}hs.`;
+
+//Atividade 06
+

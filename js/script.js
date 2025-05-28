@@ -51,21 +51,25 @@ button_imc.addEventListener("mouseup", function(){
     let peso = document.getElementsByTagName("input")[0].value;
     let altura = document.getElementsByTagName("input")[1].value;
     let IMC = (peso / Math.pow(altura/100, 2)).toFixed(1);
+    let imc_box = document.getElementById("imc_box");
+    let imc_end;
 
     switch(true){
         case(IMC < 18.5):
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "abaixo do peso";break;
+            imc_end = "abaixo do peso";break;
         case(IMC < 25):
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "peso ideal - Parabéns!";break;
+            imc_end = "peso ideal - Parabéns!";break;
         case(IMC < 30):
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "levemente acima do peso";break;
+            imc_end = "levemente acima do peso";break;
         case(IMC < 35): 
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "obesidade grau I";break;
+            imc_end = "obesidade grau I";break;
         case(IMC < 40):
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "obesidade grau II (severa)";break;
+            imc_end = "obesidade grau II (severa)";break;
         case(IMC >= 40):
-            document.getElementById("imc_box").value = "IMC = " + IMC + " - " + "obesidade grau III (mórbida)";break;
+            imc_end = "obesidade grau III (mórbida)";break;
     }
+    
+    imc_box.value = "IMC = " + IMC + " - " + imc_end;
 })
 
 //Atividade 3
@@ -121,14 +125,20 @@ let bclear = document.getElementById("button4");
 let clear_last = document.getElementById("button5");
 let lista_array = new Array;
 let pLista = document.getElementById("pLista");
-
+let error5 = document.getElementById("error_input5");
 
 blista.addEventListener("click", () => {
     let lista = document.getElementById("listaVIP").value;
-    if (lista == "") return;
+    
+    if (lista == "") {
+        error5.innerHTML = "Campo vazio."
+        return;
+    };
+    error5.innerHTML = "";
 
     let char = lista.length;
     var y;
+
     if (lista_array.length == 0) y = 0; else y = (lista_array.length)++;
     var start_index = 0;
 

@@ -52,7 +52,7 @@ html {
     width: fit-content;
 }
 
-#peso, #altura, #imc_box, #nota1, #nota2, #media_box, #listaVIP{
+#peso, #altura, #imc_box, #nota1, #nota2, #media_box, #listaVIP, #rand_number, #number_input{
     max-width: 100%;
     min-width: 150px;
     height: 1.25rem;
@@ -65,14 +65,14 @@ html {
     width: 90px;
 }
 
-#imc_box, #media_box, #listaVIP {
+#imc_box, #media_box, #listaVIP, #rand_number {
     border: 1px solid orange;
     border-radius: 3px;
     padding: 1%;
     resize: none;
 }
 
-#listaVIP {
+#listaVIP{
     /* max-width: 800px; */
     min-width: 100%;
     text-align: left;
@@ -81,17 +81,14 @@ html {
 #plista li{
     padding: 0;
 }
-/* #media_box{
-    width: 200px;
-} */
 
-#error_input1, #error_input2, #error_input3, #error_input4{
+#error_input1, #error_input2, #error_input3, #error_input4, #error_input5{
     color: red;
     font-size: small;
     text-align: center;
 }
 
-#form #button1, #button2, #button3, #button4, #button5{
+#form #button1, #button2, #button3, #button4, #button5, #button6, #button7{
     padding: 0px 5%;
     font-size: 1rem;
     /* line-height: 2.5rem; */
@@ -115,7 +112,7 @@ html {
     margin-left: 10px;
 }
 
-#form #button1:hover, #button2:hover, #button3:hover{
+#form #button1:hover, #button2:hover, #button3:hover, #button6:hover, #button7:hover{
     background-color: rgb(123, 37, 0);
     color: beige;
 }

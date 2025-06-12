@@ -61,6 +61,10 @@ html {
     text-align: center;
 }
 
+#resultado, #vidas {
+    text-align: center;
+}
+
 .label{
     width: 90px;
 }
@@ -120,6 +124,11 @@ html {
 #button4:hover, #button5:hover{
     background-color: dimgrey;
     color: rgb(235, 235, 235);
+}
+
+#button6:disabled, #button7:disabled {
+    background-color: gray;
+    color: whitesmoke;
 }
 
 header {

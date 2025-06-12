@@ -94,17 +94,23 @@
         <hr />
         <p id="atv">Atividade 06:</p>
         <div id="atv_container">
-            <p>Jogo</p>
+            <p>Jogo - Tente adivinhar o número (1 a 10) em 3 tentativas!</p>
             <div class="form">
-                <div class="form_center">
-                    <input type="text" name="rand_number" id="rand_number" placeholder="NUMERO SECRETO" readonly>
-                </div>
-                <div class="form_center">
-                    <input type="number" id="number_input" placeholder="Sua tentativa" min="1" max="10">
-                </div>
-                <div class="form_center">
-                    <button href="#" id="button6" type="button">Tentativa</button>
-                    <button href="#" id="button7" type="button">Novo Jovo</button>
+                <div class="form_out">
+                    <div class="form_out">
+                        <p id="resultado"></p> 
+                        <p id="vidas"></p>
+                    </div>
+                    <div class="form_center">
+                        <input type="text" name="rand_number" id="rand_number" placeholder="NUMERO SECRETO" readonly>
+                    </div>
+                    <div class="form_center">
+                        <input type="number" id="number_input" placeholder="Sua tentativa" min="1" max="10">
+                    </div>
+                    <div class="form_center">
+                        <button href="#" id="button6" type="button">Tentativa</button>
+                        <button href="#" id="button7" type="button">Novo Jogo</button>
+                    </div>
                 </div>
             </div>
         </div>

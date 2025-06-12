@@ -43,6 +43,7 @@ let niver_min = f_countdown_min(niver_hora);
 let countdown_niver = document.getElementById("data_niver");
 countdown_niver.innerHTML = "Faltam " + Math.floor(niver_data) + " dias " + Math.floor(niver_hora) + " horas e " + Math.floor(niver_min) + " minutos para o meu aniversário '-'";
 
+
 // Atividade 2
 
 let button_imc = document.getElementById("button1");
@@ -68,9 +69,10 @@ button_imc.addEventListener("mouseup", function(){
         case(IMC >= 40):
             imc_end = "obesidade grau III (mórbida)";break;
     }
-    
+
     imc_box.value = "IMC = " + IMC + " - " + imc_end;
 })
+
 
 //Atividade 3
 
@@ -117,6 +119,7 @@ bmedia.addEventListener("mouseup", function(){
     document.getElementById("media_box").value = media + " - " + result;
     }
 })
+
 
 //Atividade 4
 
@@ -180,6 +183,7 @@ clear_last.addEventListener("mouseup", () => {
     pLista.removeChild(pLista.lastElementChild);
 });
 
+
 //Atividade 05
 
 let hoje_data = new Date();
@@ -207,5 +211,77 @@ function addZero(i) {
 print_data.innerHTML = `${saudacao} Hoje é ${dia_da_semana[hoje_data.getDay()]}, ${addZero(hoje_data.getDate())} de 
 ${meses_do_ano[hoje_data.getMonth()]} de ${hoje_data.getFullYear()} - ${addZero(hoje_data.getHours())}:${addZero(hoje_data.getMinutes())}hs.`;
 
+
 //Atividade 06
 
+let novo = true;
+let bt_tentativa = document.getElementById("button6");
+let bt_novojogo = document.getElementById("button7");
+let heart = document.getElementById("vidas");
+let numero_escondido = document.getElementById("rand_number");
+let cmp_tentativa = document.getElementById("number_input");
+let resultado = document.getElementById("resultado");
+let vidas;
+let numero_secreto;
+let var_addHearts;
+
+function dis_button (novo){
+    if (novo){
+        bt_tentativa.disabled = true;
+    }
+}
+
+dis_button(novo);
+console.log(cmp_tentativa.value);
+
+function addHearts (times){
+    for(let i = 0; i < times; i++){
+        var_addHearts += "&#x2665;";
+    }
+}
+
+bt_novojogo.addEventListener("click", () => {
+    bt_tentativa.disabled = false;
+
+    resultado.innerHTML = "";
+    var_addHearts = "";
+
+    vidas = 3;
+
+    addHearts(vidas);
+    heart.innerHTML = var_addHearts;
+
+    numero_escondido.value = "**";
+    cmp_tentativa.value = "Sua tentativa";
+
+    numero_secreto = Math.ceil(Math.random() * 10);
+    console.log(numero_secreto);
+});
+
+bt_tentativa.addEventListener("click", () => {
+    if (cmp_tentativa.value === ""){
+        resultado.innerHTML = "Digite um número para tentar";
+    } else {
+        if (cmp_tentativa.value == numero_secreto){
+            numero_escondido.value = numero_secreto;
+            dis_button(true);
+            if (vidas == 3) {
+                resultado.innerHTML = "Parabéns! Jogada Perfeita!";
+            } else {
+                resultado.innerHTML = "Parabéns! Você acertou o número!";
+            }
+        } else {
+            var_addHearts = "";
+            vidas -= 1;
+            if(vidas >= 1){
+                resultado.innerHTML = "Tente novamente!";
+                addHearts(vidas);
+                heart.innerHTML = var_addHearts;
+            } else {
+                resultado.innerHTML = "Você Perdeu :(";
+                heart.innerHTML = "";
+                dis_button(true);
+            }
+        }
+    }
+});

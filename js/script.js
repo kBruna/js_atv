@@ -320,9 +320,9 @@ function crescer() {
         sun.width += 2;
         if(sun.width >= 340){
             clearInterval(b1)
-            diminuir();
+            setTimeout(diminuir, 500);
         }
-    }, 300);
+    }, 100);
 }
 
 function diminuir() { 
@@ -330,9 +330,9 @@ function diminuir() {
         sun.width -= 2;
         if(sun.width <= 250){
             clearInterval(b2)
-            crescer();
+            setTimeout(crescer, 500);
         }
-    }, 300);
+    }, 100);
 }
 
 crescer();
@@ -340,3 +340,14 @@ crescer();
 
 // Atividade 10
 
+let picture = document.getElementById("slide");
+let t, x = 1;
+
+function slides() {
+    picture.innerHTML = `<img src="img/img_0`+ x + `.jpg" />`;
+    x++;
+    if(x > 6) x = 1;
+    t = window.setTimeout(slides, 3000);
+}
+
+slides();

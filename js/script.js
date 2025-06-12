@@ -285,3 +285,58 @@ bt_tentativa.addEventListener("click", () => {
         }
     }
 });
+
+
+// Atividade 07
+
+let links = document.getElementById("sites");
+
+links.addEventListener("change", function() {
+    let url = this.value;
+    window.open(url, "_blank");
+});
+
+
+// Atividade 08
+
+let relogio = document.getElementById("relogio");
+
+function updateRelogio() {
+    relogio.innerHTML = `${new Date().toLocaleTimeString()}`;
+};
+
+setInterval(updateRelogio, 1000);
+
+
+// Atividade 09
+
+let sun = document.getElementById("sun");
+// let size = 400;
+// let crescer;
+// let diminuir;
+
+function crescer() {
+    let b1 = setInterval(() => {
+        sun.width += 2;
+        if(sun.width >= 340){
+            clearInterval(b1)
+            diminuir();
+        }
+    }, 300);
+}
+
+function diminuir() { 
+    let b2 = setInterval(() => {
+        sun.width -= 2;
+        if(sun.width <= 250){
+            clearInterval(b2)
+            crescer();
+        }
+    }, 300);
+}
+
+crescer();
+
+
+// Atividade 10
+

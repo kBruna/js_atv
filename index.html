@@ -156,5 +156,39 @@
                 </div>
             </div>
         </div>
+        <hr />
+        <p id="atv">Atividade PHP:</p>
+        <div id="atv_container">
+            <p>Triângulo:</p>
+            <div class="form">
+                <div class="form_center">
+                    <div class="form_cont">
+                        <form id="triangulo" name="triangulo" method="post" action="tri.php">
+                            <div class="form_cont">
+                                <label for="lado1" class="label">Lado 1: </label>
+                                <input id="lado1" type="number" name="lado1" inputmode="numeric" pattern="[0-9]*" placeholder="Lado 1" required="required" min="1">
+                            </div>
+                            <p id="error_input6"></p>
+                            <div class="form_cont">
+                                <label for="lado2" class="label">Lado 2: </label>
+                                <input id="lado2" type="number" name="lado2" inputmode="numeric" pattern="[0-9]*" placeholder="Lado 2" required="required" min="1">
+                            </div>
+                            <p id="error_input7"></p>
+                            <div class="form_cont">
+                                <label for="lado3" class="label">Lado 3: </label>
+                                <input id="lado3" type="number"name="lado3" inputmode="numeric" pattern="[0-9]*" placeholder="Lado 2" required="required" min="1">
+                            </div>
+                            <p id="error_input8"></p>
+                            <button href="#" id="button8" type="button">Verificar</button>
+                        </form>
+                    </div>
+                    <div id="sun_div">
+                        <div class="form_cont">
+                            <p id="img_tri"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

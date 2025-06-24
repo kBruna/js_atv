@@ -54,7 +54,7 @@ html {
     width: fit-content;
 }
 
-#peso, #altura, #imc_box, #nota1, #nota2, #media_box, #listaVIP, #rand_number, #number_input{
+#peso, #altura, #imc_box, #nota1, #nota2, #media_box, #listaVIP, #rand_number, #number_input, #lado1, #lado2, #lado3 {
     max-width: 100%;
     min-width: 150px;
     height: 1.25rem;
@@ -88,13 +88,13 @@ html {
     padding: 0;
 }
 
-#error_input1, #error_input2, #error_input3, #error_input4, #error_input5{
+#error_input1, #error_input2, #error_input3, #error_input4, #error_input5, #error_input6, #error_input7, #error_input8 {
     color: red;
     font-size: small;
     text-align: center;
 }
 
-#form #button1, #button2, #button3, #button4, #button5, #button6, #button7 {
+#form #button1, #button2, #button3, #button4, #button5, #button6, #button7, #button8 {
     padding: 0px 5%;
     font-size: 1rem;
     /* line-height: 2.5rem; */
@@ -155,7 +155,7 @@ html {
     margin-left: 10px;
 }
 
-#form #button1:hover, #button2:hover, #button3:hover, #button6:hover, #button7:hover{
+#form #button1:hover, #button2:hover, #button3:hover, #button6:hover, #button7:hover, #button8:hover{
     background-color: rgb(123, 37, 0);
     color: beige;
 }

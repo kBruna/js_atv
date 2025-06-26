@@ -54,6 +54,13 @@ html {
     width: fit-content;
 }
 
+#triangulo {
+    display: flex;
+    flex-direction: column;
+    min-width: 310px;
+    justify-content: center;
+}
+
 #peso, #altura, #imc_box, #nota1, #nota2, #media_box, #listaVIP, #rand_number, #number_input, #lado1, #lado2, #lado3 {
     max-width: 100%;
     min-width: 150px;
@@ -63,7 +70,7 @@ html {
     text-align: center;
 }
 
-#resultado, #vidas {
+#resultado, #vidas, #tri_msg {
     text-align: center;
 }
 
@@ -133,6 +140,12 @@ html {
   object-fit: cover;
 }
 
+#img_tri{
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
 #sun_div {
     display: flex;
     width: 350px;
@@ -154,6 +167,10 @@ html {
 #button3 {
     margin-left: 10px;
 }
+
+/* #button8 {
+    margin: 0 auto;
+} */
 
 #form #button1:hover, #button2:hover, #button3:hover, #button6:hover, #button7:hover, #button8:hover{
     background-color: rgb(123, 37, 0);
